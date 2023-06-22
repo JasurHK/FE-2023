@@ -1,0 +1,137 @@
+.image-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.image-section img{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.menu-links{
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+.menu-links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-links ul li{
+    padding: 0px 30px;
+    font-size: 17px ;
+    list-style: none;
+}
+.menu-links ul li a{
+    text-decoration: none;
+    color: white;
+    
+} 
+/* product-info */
+.product-info{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    
+
+
+}
+.product-info img{
+    width: 22%;
+    height: 4vh;
+}
+.product-info span{
+    font-size: 100px;
+    color: white;
+    text-shadow: 3px white;
+}
+.product-info p{
+    width: 80%;
+}
+.product-info button{
+    font-size: bold;
+    padding: 10px 15px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+/* navigation */
+.navigation{
+    width: 3.5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+.navigation img{
+    width: 50%;
+    height: 3.5vh;
+    cursor: pointer;
+}
+.navigation a{
+    text-decoration: none;
+    color: black;
+    rotate: -90deg;
+}
+/* PRODUCT CARD */
+.product-card{
+    width: 18%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    right: 200px;
+    bottom: -100px;
+    
+}
+.product-image{
+    width: 80%;
+    position: relative;
+    padding: 10px 10px;
+}
+.product-image img{
+    width: 100%;
+    height: 25vh;
+}
+.like-icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.like-icon img{
+    width: 100%;
+    height: 3vh;
+   
+}
+.product-card p{
+    padding: 0px 20px;
+}
+.product-card span{
+    color: red;
+    font-size: larger;
+    font-weight: bold;
+}
+.product-card button{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    cursor: pointer;
+}
