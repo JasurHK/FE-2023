@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navigation{
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+
+    background-color: rgb(3, 3, 3);
+    color: white;
+}
+.navigation__bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 25;
+    align-items: center;
+}
+.navigation__bar-links{
+    width: 50%;
+}
+.navigation__bar-links ul{
+    display: flex;
+    justify-content: space-around;
+}
+.navigation__bar-links ul li{
+    list-style: none;
+}
+.navigation__bar-links ul li a{
+    text-decoration: none;
+    color:white;
+}
+.navigation__bar-log{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+.navigation__bar-log-btn button{
+    width: 100%;
+    margin: 30px,30px;
+    background-color: rgb(17, 17, 128);
+    color: white;
+}
+.home {
+    width: 100%;
+    height: 90vh;
+    background-image: url('../assets/smth.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
