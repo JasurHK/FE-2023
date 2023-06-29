@@ -8,7 +8,7 @@
     height: 10vh;
     align-items: center;
 
-    background-color: rgb(3, 3, 3);
+    background-color:rgb(3, 3, 3);
     color: white;
 }
 .navigation__bar{
@@ -37,12 +37,32 @@
     width: 25%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    gap: 10%;
 }
 .navigation__bar-log-btn button{
-    width: 100%;
-    margin: 30px,30px;
+    width: 150%;
+    height: 5vh;
     background-color: rgb(17, 17, 128);
     color: white;
+    border: none;
+    cursor: pointer;
+}
+.navigation__bar-log-in{
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    background-color: white;
+}
+.navigation__bar-log-in img{
+   width: 20%;
+   height: 5vh;
+}
+.navigation__bar-log-in a{
+    text-decoration: none;
+    color: black;
 }
 .home {
     width: 100%;
