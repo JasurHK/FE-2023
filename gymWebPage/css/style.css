@@ -84,10 +84,10 @@
 
     position: absolute;
     top: 270px;
-    left: -190px;
+    left: -200px;
 }
 .side__bar-logo{
-    width: 40%;
+    width: 50%;
     height: 5vh;
 
     display: flex;
@@ -107,7 +107,7 @@
 }
 .side__bar-btn{
     background-color: rgb(17, 17, 128);
-    width: 60%;
+    width: 50%;
     height: 5vh;
     display: flex;
     justify-content: center;
