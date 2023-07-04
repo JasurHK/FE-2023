@@ -9,12 +9,20 @@ console.log("3");
 function greet(name, smth) {
     console.log("Hello, " + name + "!");
     smth();
-  }
+}
   
-  const sayGoodbye = () =>{
+const sayGoodbye = () =>{
     console.log("Goodbye!");
-  }
+}
   
-  greet("Alice", sayGoodbye);
-
- // ------------Callback_Hell----------- 
+greet("Alice", sayGoodbye);
+ 
+const sayHello = ( name , smth) => {
+    console.log(`hello ${name}!`);
+    smth();
+};
+const sayHi = ()=> {
+    console.log('hi!');
+};
+sayHello('john', sayHi);
+ 
