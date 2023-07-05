@@ -7,7 +7,7 @@ let base = {
  
 };
 
-let is_there_custumar = true ;
+let is_there_custumar = false ;
 
 const order = (time , work)=>{
 
@@ -49,3 +49,73 @@ order(1000, ()=>console.log(`Costumer wants ${base.type[2]}`))
 
 .finally ( ()=>console.log('we finished work') );
 
+// let is_cloudy = false ;
+
+// const is_raining = (time , procses)=>{
+//     return new Promise ( (resoleve , reject)=>{
+//         if (is_cloudy){
+//             setTimeout( ()=>{
+//                 resoleve(procses());
+//             },time);
+//         }
+//         else {
+//             reject( console.log('it is sunny!'));
+//         }
+//     });
+
+// };
+// is_raining(2000, ()=>{console.log('it is cloudy , it is gonna rain')})
+
+// .then( ()=>{
+//     return is_raining(2000, ()=>{console.log('Oh it is raing')})
+// })
+
+// .then( ()=>{
+//     return is_raining(1000, ()=>{console.log('fu#k i forgot my umbralla')})
+// })
+
+// .catch( ()=>{
+//     console.log('it is not gonna rain today so we can go to beach')
+// })
+
+// .finally( ()=>{
+//     return is_raining( 2000, ()=>{console.log('lets go!')})
+// });
+
+
+
+
+let is_cloudy = true;
+
+const is_raining = (time, process) => {
+  return new Promise((resolve, reject) => {
+    if (is_cloudy) {
+      setTimeout(() => {
+        resolve(process());
+      }, time);
+    } 
+    else {
+      reject(console.log('It is sunny!'));
+    }
+  });
+};
+
+is_raining(2000, () => {
+  console.log('It is cloudy, it is gonna rain');
+})
+  .then(() => {
+    return is_raining(2000, () => {
+      console.log('Oh, it is raining');
+    });
+  })
+  .then(() => {
+    return is_raining(1000, () => {
+      console.log('Oops, I forgot my umbrella');
+    });
+  })
+  .catch(() => {
+    console.log('It is not gonna rain today, so we can go to the beach');
+  })
+  .finally(() => {
+    console.log('Let\'s go!');
+  });
