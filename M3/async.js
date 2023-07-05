@@ -39,6 +39,16 @@ const order =(type, call_kitchen) =>{
    setTimeout( ()=>{
       console.log(`Costumer wants ${base.type[type]}`)
 
+      setTimeout( ()=>{
+         console.log('Same: yalla habibi! :)');
+
+         setTimeout( ()=>{
+            console.log('Same: faster yaa man');
+
+         },2500);
+
+      },2000);
+
       call_kitchen();
    },1000)
    
