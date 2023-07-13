@@ -30,7 +30,7 @@ const getData = () => {
 const sendData = () => {
     sendHttpRequest('POST', 'https://reqres.in/api/register', {
         email: "eve.holt@reqres.in", 
-        // password: "pistol" //if email or password is wrong it will be rejected and catch block console logs
+        password: "pistol" //if email or password is wrong it will be rejected and catch block console logs
     
     })
     .then(responseData=>{
