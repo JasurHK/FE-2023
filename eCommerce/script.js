@@ -9,4 +9,4 @@ AOS.init({
 
 document.addEventListener("DOMContentLoaded", function() {
     window.alert("Accept cooclies!");
-})
+});
