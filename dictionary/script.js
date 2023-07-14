@@ -21,8 +21,11 @@ btn.addEventListener("click", ()=>{
         </div>
         <p class="word-meaning">${data[0].meanings[0].definitions[0].definition}</p>
         <p class="word-example">${data[0].meanings[0].definitions[0].example || ""}</p>`;
-        sound.setAttribute("src", `https:${data[0].phonetics[1].audio}`);
+        sound.setAttribute("src", `${data[0].phonetics[1].audio}`);
         console.log(sound);
+    })
+    .catch( ()=>{
+        result.innerHTML = `<h3 class="error">Coudn't Find The Word</h3>`
     });
 });
 function playSound(){
