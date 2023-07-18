@@ -16,19 +16,36 @@ header{
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
+    gap: 20px;
     background-color: var(--secondary-color);
 }
-.search{
+.movie_name{
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: inherit;
+    color: #000;
+}
+.movie_name:focus{
+    outline: 0;
+    color: #fff;
+}
+.btn{
     background-color: transparent;
     border-radius: 50px;
     border-color: 2px solid var(--primary-color);
     padding: 0.5rem 1rem;
+    margin: 0rem 1rem;
     font-size: 1rem;
     font-family: inherit;
-    color: #000;
+    color: #fff; 
+    cursor: pointer;
 }
-.search:focus{
+.btn:hover{
     outline: 0;
+    color: #000;
     background-color: #fff;
 }
 .main {
