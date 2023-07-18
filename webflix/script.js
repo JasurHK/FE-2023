@@ -9,7 +9,7 @@ btn.addEventListener("click", ()=>{
     const secondP = {
     'method': 'GET',
     'headers': {
-	    'X-RapidAPI-Key': '902d90da72mshfad27c9b108d434p191acejsn81db4bf0c071',
+	    'X-RapidAPI-Key': '',
 	    'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
     }};
     // fetch(url, secondP)
