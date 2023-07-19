@@ -1,3 +1,11 @@
+// document.addEventListener("DOMContentLoaded",()=>{
+//   main.innerHTML=`
+//   `
+// });
+
+
+
+
 const main = document.getElementById("main")
 const btn = document.getElementById("btn");
 
@@ -9,7 +17,8 @@ btn.addEventListener("click", ()=>{
     const secondP = {
     'method': 'GET',
     'headers': {
-	    'X-RapidAPI-Key': '',
+	    'X-RapidAPI-Key': '', 
+      // ATTENTION! API KEY IS REQUIRED
 	    'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
     }};
     // fetch(url, secondP)
@@ -35,7 +44,7 @@ btn.addEventListener("click", ()=>{
     // </div>`
 
     // })
-    fetch(url, secondP)
+  fetch(url, secondP)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
