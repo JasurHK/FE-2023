@@ -57,6 +57,8 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items:end;
+    
 
     /* display: flex;
     gap: 4vmin;
@@ -64,7 +66,21 @@ header{
     left: 50%;
     top: 50%;
     transform: translate(0% , -50%); */
+}
 
+h2{
+    color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    -webkit-box-reflect: below 0.3rem linear-gradient(transparent, #0004);
+    line-height: 5rem;
+    text-shadow: 0 0 10px #d77d16,
+    0 0 10px #03bcf4,
+    0 0 10px #03bcf4,
+    0 0 10px #03bcf4,
+    0 0 160px #03bcf4;
 }
 .movie{
     width: 300px;
