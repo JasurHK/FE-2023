@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat' , sans-serif;
+    height: 100vh;
+
+}
+.slider{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.left-slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    transition: transform .5s ease-in-out;
+}
+.left-slider > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.left-slider h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.left-slider p{
+    padding: 15px;
+    margin: 10px;
+}
+.right-slider{
+    position: absolute;
+    top: 0;
+    left: 35%;
+    height: 100%;
+    transition: transform .5s ease-in-out;
+}
+.right-slider > div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+.right-slider > div img{
+    width: 100%;
+    height: 100%;
+}
+button{
+    background-color: #fff;
+    color: #aaa;
+    cursor: pointer;
+    border: none;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 5px;
+}
+button:hover{
+    color: #222;
+}
+button:focus{
+    outline: none;
+}
+.buttons{
+    position: absolute;
+    right: 65%;
+    top: 46%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
