@@ -321,7 +321,11 @@ main{
 .home-list ul li a:hover{
     background-color: rgb(96, 93, 93);
 }
-
+.home-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .home-user{
     width: 100%;
     height: 10vh;
@@ -329,6 +333,30 @@ main{
     justify-content: start;
     gap: 20px;
     align-items: center;
+}
+.home-swiper-btn{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-swiper-btn .more{
+    border: 0.7px solid gray;
+    border-radius: 30px;
+    padding: 8px 10px;
+}
+.home-swiper-btn .more:hover{
+    background-color:rgb(79, 79, 79) ;
+    border: none;
+}
+.home-swiper-btn div{
+    padding: 8px 12px;
+    border: 0.7px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.home-swiper-btn div:hover{
+    background-color:rgb(79, 79, 79) ;
 }
 .home-user-icon{
     width: 50px;
