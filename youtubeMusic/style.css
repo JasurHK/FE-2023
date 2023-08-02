@@ -411,3 +411,128 @@ main{
 .card a img:hover{
     opacity: 0.5;
 }
+
+
+/* output */
+.output{
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 15vh;
+
+    display: flex;
+    justify-content: center;
+}
+.output-left{
+    width: 45%;
+    height: 100%;
+    border-radius: 10px 0 0 10px ;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    background:linear-gradient(to top, rgb(18, 18, 18), rgb(79, 79, 79));
+}
+.output-left_img{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    align-items: center;
+}
+.output-left_img a{
+    position: relative;
+}
+.output-left_img a i{
+    color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+}
+
+.output-left_img a img{
+    background-color: #111;
+    width: 100px;
+}
+.output-left_img a img:hover{
+    opacity: 0.5;
+}
+.output-left_cont{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.output-left_cont p{
+    color: gray;
+    font-weight: 600;
+}
+.output-left_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.output-left_btn .play{
+    background-color: #fff;
+    color: #111;
+}
+.output-left_btn button{
+    border: 0.5px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px ;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+.output-left_btn button:hover{
+    opacity: 0.5;
+}
+
+
+
+.output-right{
+    width: 45%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 10px;
+    align-items: start;
+    overflow: hidden;
+    padding: 15px;
+
+    background:linear-gradient(to top, #111, rgb(37, 37, 37));
+    box-shadow: 10px rgb(79, 79, 79);
+}
+.output-right_list ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.output-right_list ul li a{
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+}
+.output-right_list ul li a:hover{
+    overflow: visible;
+    opacity: 0.5;
+}
+.output-right_list ul li a div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
