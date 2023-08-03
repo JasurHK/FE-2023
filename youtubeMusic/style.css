@@ -536,3 +536,17 @@ main{
     flex-direction: column;
     justify-content: space-around;
 }
+
+
+/* music player */
+.music-player{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(45,45,45);
+
+    border-top: 1px solid red;
+}
