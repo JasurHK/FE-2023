@@ -7,27 +7,26 @@ function toggleElement() {
     }
 }
 // this adds home section to the main when page is succesfully loades
-window.onload = function() {
-    const newSection = document.createElement('section');
-    newSection.id = 'home';
-    newSection.className='home';
-    newSection.innerHTML = '';
+// window.onload = function() {
+//     const newSection = document.createElement('section');
+//     newSection.id = 'home';
+//     newSection.className='home';
+//     newSection.innerHTML = '';
     
-    document.main.appendChild(newSection);
-  };
+//     document.main.appendChild(newSection);
+//   };
 
 
 
-
-
-const textInput = document.getElementById('song-name');
-const output = document.getElementById('home');
-
-textInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    const inputValue = textInput.value;
-    output.innerHTML= `
-    <div class="home-list">
+document.addEventListener('DOMContentLoaded', function() {
+    const textInput = document.getElementById('song-name');
+    const output = document.getElementById('home');
+  
+    textInput.addEventListener('keydown', async function(event) {
+      if (event.key === 'Enter') {
+        const inputValue = textInput.value;
+        output.innerHTML = `
+        <div class="home-list" style="margin-left: 50px;">
         <ul>
             <li>
                 <a href="#">Song</a>
@@ -63,7 +62,7 @@ textInput.addEventListener('keydown', function(event) {
                             <h2>the night we met</h2>
                             <p>song.<span></span>something</p>
                             <div class="output-left_btn">
-                                <button class="play"><i class="fa fa-play" aria-hidden="true"></i>play</button>
+                                <button class="play" id="play"><i class="fa fa-play" aria-hidden="true"></i>play</button>
                                 <button><i class="fa fa-plus-square" aria-hidden="true"></i>save</button>
                             </div>
                         </div>
@@ -103,8 +102,29 @@ textInput.addEventListener('keydown', function(event) {
                         </ul>
                     </div>
                 </div>
-            </div>
-    `;
-  }
-});
+            </div>  
+        `;
+        
+        // Call the function that contains the second event listener using await
+        await secondEventListenerFunction();
+      }
+    });
   
+    
+    // this creats music player in the footer place
+  
+    // Define the function for the second event listener
+    function secondEventListenerFunction() {
+        const playerBtn = document.getElementById('play');
+    
+        playerBtn.addEventListener('click', function() {
+          const newDiv = document.createElement('div');
+          newDiv.className = 'music-player';
+          newDiv.textContent = 'hello bitches';
+        
+          document.body.appendChild(newDiv);
+        });
+    }
+  });
+  
+    
