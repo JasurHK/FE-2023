@@ -6,7 +6,7 @@ const useFetch = (url)=>{
     const [error, setError] = useState(null);   
      
     useEffect(()=>{
-        console.log('useEffect ran')
+        const abortCont = new AbortController();
         // don't use setTimeout in a real world project !!! 
         setTimeout(() => {
           fetch(url)
@@ -22,10 +22,17 @@ const useFetch = (url)=>{
             setError(null);
           })
           .catch(err =>{
-             setError(err.message);
-             setIsPending(false);
+            if (err.name === 'AbortError') {
+              console.log('fetch aborted')
+            }
+            else {
+              setError(err.message);
+              setIsPending(false);
+            }
+             
           })
         }, 1000);
+        return ()=> abortCont.abort
       }, [url]);
 
       return {data, isPending, error}
