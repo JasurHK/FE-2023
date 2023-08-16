@@ -3,24 +3,34 @@ import BlogList from "./BlogList";
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null);
-    const [isPending, setIsPending] = useState(true)
-    
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);   
       useEffect(()=>{
         console.log('useEffect ran')
+        // don't use setTimeout in a real world project !!! 
         setTimeout(() => {
           fetch('http://localhost:8000/blogs')
           .then(res =>{
+            if(!res.ok){
+              throw Error('404 error (not found)')
+            }
             return res.json();
           })
           .then(data =>{
             setBlogs(data);
             setIsPending(false);
+            setError(null);
+          })
+          .catch(err =>{
+             setError(err.message);
+             setIsPending(false);
           })
         }, 1000);
       }, []);
 
     return (
         <div className="home">
+          {error && <div>{error}</div>}
           {isPending && <div>Loading...</div>}   
           {blogs && <BlogList blogs={blogs} title= 'All blogs' />}
         </div>
