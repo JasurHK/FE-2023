@@ -6,6 +6,11 @@ const Navbar = () => {
                 <label >City name:</label>
                 <input type="text" placeholder="Search for a location"/>
             </form>
+            <div className="links">
+                <a href="">Warsaw</a>
+                <a href="">Berlin</a>
+                <a href="">Tokyo</a>
+            </div>
         </nav>
     );
 }

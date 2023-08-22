@@ -10,13 +10,69 @@
 body{
   width: 100vw;
   height: 100vh;
-  background-color: linear-gradient(45deg,violet , purple);
+  background-color: rgb(219, 217, 217);
 }
 .navigation {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 800px;
+  width: 800px;
+
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #333;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation input{
+  margin: 0 10px;
+  padding: 0 10px;
+  height: 5vh;
+  border: 1px solid #333;
+  outline: none;
+  border-radius: 30px;
+}
+
+.links{
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.links a{
+  text-decoration: none;
+}
+
+
+.card{
+  width: 800px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50% ,0);
+}
+.left-card{
+  margin: 15px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+.right-card{
+  margin: 15px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
