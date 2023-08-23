@@ -5,25 +5,43 @@ import { WiDaySunny } from 'weather-icons-react';
 import { useEffect } from 'react';
 
 function App() {
-  const [forecast, setForecast] = useState('')
-  const url = 'https://forecast9.p.rapidapi.com/rapidapi/forecast/Berlin/hourly/';
-  const options = {
-  	method: 'GET',
-  	headers: {
-  		'X-RapidAPI-Key': '902d90da72mshfad27c9b108d434p191acejsn81db4bf0c071',
-  		'X-RapidAPI-Host': 'forecast9.p.rapidapi.com'
-  	}
-  };
-  useEffect(()=>{
-    fetch(url , options)
-  .then(res=>{
-    return res.json()
-  })
-  .then((data)=> {
-    console.log(data.stringify());
-    setForecast(data);
-  })
-  },[])
+
+  
+    // const url = 'https://dark-sky.p.rapidapi.com/%7Blatitude%7D,%7Blongitude%7D?units=auto&lang=en';
+    // const options = {
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': '902d90da72mshfad27c9b108d434p191acejsn81db4bf0c071',
+    //         'X-RapidAPI-Host': 'dark-sky.p.rapidapi.com'
+    //     }
+    // };
+    // const [forecast, setForecast] = useState([])
+    // useEffect(()=>{
+    //   fetch(url , options)
+    // .then(res=>{
+    //   return res.json()
+    // })
+    // .then((data)=> {
+    //   console.log(data.location.name);
+    //   setForecast(data)
+    // })
+    // },[])
+
+    const [forecast , setForecast] = useState('')
+
+    useEffect(()=>{
+      fetch('https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=aea35f50e133b4ecc36b1033d7d54938',{
+      method: 'get'
+    })
+    .then(res =>{
+      return res.json()
+    })
+    .then((data)=>{
+      console.log(data)
+      setForecast(data)
+    })
+    }, [])
+
 
   return (
     <div className="app">
@@ -32,16 +50,12 @@ function App() {
       <div className="weather">
         <div className="weather-details">
           <div>
-            <h1>CityName</h1>
-            <p>chance of rain</p>
+            <p></p>
           </div>
-          <h1>31 C</h1>
+          <h1>K</h1>
         </div>
         <div className="weather-icon">
-          <WiDaySunny size={100}/>
-          <div>
-            {forecast && <p>{forecast[2]}hello</p>}
-          </div>
+          <div></div>
         </div>
       </div>
     </div>
