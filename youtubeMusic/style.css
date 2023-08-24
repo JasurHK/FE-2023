@@ -471,7 +471,8 @@ main{
 }
 .output-left_btn{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 50px;
     align-items: center;
 }
 .output-left_btn .play{
