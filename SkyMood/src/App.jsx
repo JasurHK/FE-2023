@@ -1,9 +1,32 @@
 import { useState } from 'react'
 import Navbar from './Navbar'
 import SearchBar from './SearchBar'
-import { WiDaySunny } from 'weather-icons-react';
 import { useEffect } from 'react';
+import { FaSun, FaCloud, FaCloudRain, FaSnowflake } from 'react-icons/fa'; // Import icons from react-icons
+import { WiDaySunny, WiCloud, WiRain, WiSnow } from 'react-icons/wi'; // Import icons from react-icons
+import useFetch from './useFetch';
 
+const WeatherIcon = ({ code }) => {
+  const iconMappings = {
+    '01d': <FaSun />,
+    '01n': <WiDaySunny />,
+    '02d': <WiCloud />,
+    '02n': <WiCloud />,
+    '03d': <WiCloud />,
+    '03n': <WiCloud />,
+    '04d': <WiCloud />,
+    '04n': <WiCloud />,
+    '09d': <WiRain />,
+    '09n': <WiRain />,
+    '10d': <FaCloudRain />,
+    '10n': <WiRain />,
+    '13d': <FaSnowflake />,
+    '13n': <WiSnow />,
+  };
+  const icon = iconMappings[code] || null;
+
+  return <div className="weather-icon">{icon}</div>;
+};
 function App() {
 
   
@@ -27,21 +50,15 @@ function App() {
     // })
     // },[])
 
-    const [forecast , setForecast] = useState('')
+    
 
-    useEffect(()=>{
-      fetch('https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=aea35f50e133b4ecc36b1033d7d54938',{
-      method: 'get'
-    })
-    .then(res =>{
-      return res.json()
-    })
-    .then((data)=>{
-      console.log(data)
-      setForecast(data)
-    })
-    }, [])
+    
+  const url = ('https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=aea35f50e133b4ecc36b1033d7d54938');
+  const method = {
+    method: 'get'
+  };
 
+  const { data, isPanding, error} = useFetch('Warsaw')
 
   return (
     <div className="app">
@@ -50,12 +67,14 @@ function App() {
       <div className="weather">
         <div className="weather-details">
           <div>
-            <p></p>
+            <h1>{data&& data.name}</h1>
+            <p>{data && data.weather[0].description}</p>
+            <p>chans of rain: {data && data.main.humidity}%</p>
           </div>
-          <h1>K</h1>
+          <h1>{data &&data.main.temp}K</h1>
         </div>
         <div className="weather-icon">
-          <div></div>
+          
         </div>
       </div>
     </div>
