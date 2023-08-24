@@ -53,12 +53,9 @@ function App() {
     
 
     
-  const url = ('https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=aea35f50e133b4ecc36b1033d7d54938');
-  const method = {
-    method: 'get'
-  };
+  
 
-  const { data, isPanding, error} = useFetch('Warsaw')
+  const { data, isPanding, error} = useFetch()
 
   return (
     <div className="app">

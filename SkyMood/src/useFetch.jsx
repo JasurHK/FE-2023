@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 
-
-
-const useFetch  = (cityName)=>{
+const useFetch  = ()=>{
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);   
@@ -10,7 +8,7 @@ const useFetch  = (cityName)=>{
     useEffect(()=>{
         const abortCont = new AbortController();
         // don't use setTimeout in a real world project !!! 
-        fetch((`https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=aea35f50e133b4ecc36b1033d7d54938`),{
+        fetch((`https://api.openweathermap.org/data/2.5/weather?q=`+ 'Berlin' +`&appid=aea35f50e133b4ecc36b1033d7d54938`),{
             method: 'get'
           })
           .then(res =>{
@@ -36,7 +34,7 @@ const useFetch  = (cityName)=>{
              
           })
         return ()=> abortCont.abort
-      }, [cityName]);
+      }, []);
 
       return {data, isPending, error}
 }
