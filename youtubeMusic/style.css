@@ -472,7 +472,7 @@ main{
 .output-left_btn{
     display: flex;
     justify-content: start;
-    gap: 50px;
+    gap: 45px;
     align-items: center;
 }
 .output-left_btn .play{

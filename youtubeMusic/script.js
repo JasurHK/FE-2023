@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                             <img src="https://picsum.photos/70" alt="">
                                             <div>
                                                 <p>${result.albums.items[3].data.name}</p>
-                                                <small>${result.playlists.items[3].data.name}</small>
+                                                <small>${result.playlists.items[0].data.name}</small>
                                             </div>
                                         </a>
                                     </li>
