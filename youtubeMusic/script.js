@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (event.key === 'Enter') {
         const inputValue = textInput.value;
 
-        const url = `https://spotify23.p.rapidapi.com/search/?q=${inputValue}&type=multi&offset=0&limit=4&numberOfTopResults=5`;
-            const options = {
-            	method: 'GET',
-            	headers: {
-            		'X-RapidAPI-Key': '902d90da72mshfad27c9b108d434p191acejsn81db4bf0c071',
-            		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-            	}
-            };
+        const url =`https://deezerdevs-deezer.p.rapidapi.com/search?q=${inputValue}`;
+        const options = {
+        	method: 'GET',
+        	headers: {
+        		'X-RapidAPI-Key': '902d90da72mshfad27c9b108d434p191acejsn81db4bf0c071',
+        		'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+        	}
+        };
             
             try {
             	const response = await fetch(url, options);
@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="output-left_img">
                                 <a href="#"><i class="fa fa-play" aria-hidden="true"></i><img src="https://picsum.photos/150" alt=""></a>
                                 <div class="output-left_cont">
-                                    <h2>${result.albums.items[0].data.name}</h2>
-                                    <p>${result.tracks.items[0].data.name}</p>
+                                    <h2>${result.data[0].artist.name}</h2>
+                                    <p>${result.data[0].album.title}</p>
                                     <div class="output-left_btn">
                                         <button class="play" id="play"><i class="fa fa-play" aria-hidden="true"></i>play</button>
                                         <button><i class="fa fa-plus-square" aria-hidden="true"></i>save</button>
@@ -87,29 +87,29 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="output-right_list">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" id="play">
                                             <img src="https://picsum.photos/70" alt="">
                                             <div>
-                                                <p>${result.albums.items[1].data.name}</p>
-                                                <small>${result.playlists.items[1].data.name}</small>
+                                                <p>${result.data[1].artist.name}</p>
+                                                <small>${result.data[1].album.title}</small>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" id="play">
                                             <img src="https://picsum.photos/70" alt="">
                                             <div>
-                                                <p>${result.albums.items[2].data.name}</p>
-                                                <small>${result.playlists.items[2].data.name}</small>
+                                                <p>${result.data[2].artist.name}</p>
+                                                <small>${result.data[2].album.title}</small>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="#" id="play">
                                             <img src="https://picsum.photos/70" alt="">
                                             <div>
-                                                <p>${result.albums.items[3].data.name}</p>
-                                                <small>${result.playlists.items[0].data.name}</small>
+                                                <p>${result.data[3].artist.name}</p>
+                                                <small>${result.data[3].album.title}</small>
                                             </div>
                                         </a>
                                     </li>
@@ -119,15 +119,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>  
                 `;
 
+                // Call the function that contains the second event listener using await
+                await secondEventListenerFunction(result);
+                
+                console.log(result.data[0].preview )
+
             }
             catch (error) {
-            	console.error(error);
+            	console.error(error.massage);
             }
 
     
         
-        // Call the function that contains the second event listener using await
-        await secondEventListenerFunction();
+        
       }
     });
   
@@ -135,13 +139,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // this creats music player in the footer place
   
     // Define the function for the second event listener
-    function secondEventListenerFunction() {
+    function secondEventListenerFunction(result) {
         const playerBtn = document.getElementById('play');
     
         playerBtn.addEventListener('click', function() {
           const newDiv = document.createElement('div');
           newDiv.className = 'music-player';
-          newDiv.textContent = 'hello bitches';
+          newDiv.innerHTML = `
+          <div class="music-player" id="music-player">
+              <audio id="my-audio" controls>
+                  <source src='${result.data[0].preview}' type="audio/mpeg">
+                  Your browser does not support the audio element.
+              </audio>
+          </div>
+          `;
         
           document.body.appendChild(newDiv);
         });
