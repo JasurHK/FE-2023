@@ -550,5 +550,32 @@ main{
     color: #fff;
     background-color: rgb(45,45,45);
 
-    border-top: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+#my-audio {
+    width: 500px;
+    background-color: transparent;
+  }
+  
+  #my-audio::-webkit-media-controls-panel {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color:grey;/* Background color of the controls */
+  }
+  
+  #my-audio::-webkit-media-controls-play-button {
+    color: #fff /* Color of the play button */
+  }
+  #my-audio::-webkit-media-controls-volume-slider {
+    color: red; /* Background color of the volume slider */
+  }
+  
+  #my-audio::-webkit-media-controls-timeline {
+    color: red /* Background color of the timeline */
+  }
+  
+  
+  
+ 
