@@ -4,6 +4,7 @@ import HomeWeather from './components/home'
 import Search from './components/search'
 import { useEffect } from 'react'
 import fetchLatLon from './apis/fetch'
+import fetchSearched from './apis/fetchSearched'
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
 
   const searchWeather = async (city) => {
     try {
-      let searchedWeather = await featchSearchedWeather(city)
+      let searchedWeather = await fetchSearched(city)
       setWeatherData(searchedWeather)
     } catch (error) {
       console.log('Error: ', error)
