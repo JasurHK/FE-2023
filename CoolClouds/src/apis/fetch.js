@@ -1,6 +1,6 @@
 
 export default async function  fetchLatLon (lat , lon ){
-    const url = `https://weather338.p.rapidapi.com/weather/forecast?date=20200622&latitude=${lat}&longitude=${lon}&language=en-US&units=m`;
+    const url = `https://weather338.p.rapidapi.com/weather/forecast?date=20230828&latitude=${lat}&longitude=${lon}&language=en-US&units=m`;
     const options = {
     	method: 'GET',
     	headers: {
