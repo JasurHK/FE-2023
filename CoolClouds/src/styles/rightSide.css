@@ -1,0 +1,8 @@
+.rightSide{
+    border: 1px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+
+    grid-column: 9/13;
+    grid-row: 1/11;
+}

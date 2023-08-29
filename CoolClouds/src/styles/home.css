@@ -1,0 +1,7 @@
+.home{
+    border: 1px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    grid-column:2/9 ;
+    grid-row: 2/11;
+}

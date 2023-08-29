@@ -5,6 +5,9 @@ import Search from './components/search'
 import { useEffect } from 'react'
 import fetchLatLon from './apis/fetch'
 import fetchSearched from './apis/fetchSearched'
+import SideBar from './components/sideBar'
+import RightSide from './components/rightSide'
+import Footer from './components/footer'
 
 
 function App() {
@@ -19,7 +22,7 @@ function App() {
         const longitude = position.coords.longitude;
         setLatitude(latitude);
         setLongitude(longitude);
-        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        // console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
       });
     } else {
       console.log("Geolocation is not supported by this browser.");
@@ -36,8 +39,11 @@ function App() {
 
   const searchWeather = async (city) => {
     try {
-      let searchedWeather = await fetchSearched(city)
-      setWeatherData(searchedWeather)
+      let searched = await fetchSearched(city);
+      // console.log(searched);
+      let searchedWeatherLatLon = await fetchLatLon(searched.latitude,searched.longitude);
+
+      setWeatherData(searchedWeatherLatLon)
     } catch (error) {
       console.log('Error: ', error)
     }
@@ -50,10 +56,13 @@ function App() {
 
 
   return (
-    <>
+    <div className="app">
       <Search onSearch={searchWeather}/>
+      <SideBar />
+      <RightSide />
+      <Footer />
       <HomeWeather weather={weatherData}/>
-    </>
+    </div>
   )
 }
 
