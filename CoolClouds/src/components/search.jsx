@@ -18,6 +18,7 @@ const Search = ({onSearch}) => {
     const handleKeyDown = async(event) => {
         if (event.key === 'Enter') {
           await handleSubmit();
+          setSearchVisible(false);
         //   let element = document.getElementById("searchBar");
         //   let secondE = document.getElementById("searchBtn");
         //   element.style.display = "none";
@@ -50,6 +51,10 @@ const Search = ({onSearch}) => {
             onKeyDown={handleKeyDown}
             style={{ transform: isSearchVisible ? 'scaleX(1)' : 'scaleX(0)' }}
         />
+        <h2 
+            id="logo"
+            style={{ transform: !isSearchVisible ? 'scaleX(1)' : 'scaleX(0)' }}
+        >CoolClouds</h2>
         <button onClick={toggleElement} id="searchBtn">
             {isSearchVisible ? 'Enter' : 'Search'}
         </button>
