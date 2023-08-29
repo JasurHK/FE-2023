@@ -10,7 +10,12 @@ export default async function fetchSearched (city){
     try {
     	const response = await fetch(url, options);
     	const result = await response.json();
-    	console.log(result);
+		const data ={
+			latitude : result.location.latitude[0],
+			longitude : result.location.longitude[0],
+		};
+		console.log(data);
+		return data ;
     } catch (error) {
     	console.error(error);
     }
