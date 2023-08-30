@@ -5,9 +5,6 @@ import Search from './components/search'
 import { useEffect } from 'react'
 import fetchLatLon from './apis/fetch'
 import fetchSearched from './apis/fetchSearched'
-import SideBar from './components/sideBar'
-import RightSide from './components/rightSide'
-import Footer from './components/footer'
 
 
 function App() {
@@ -58,9 +55,7 @@ function App() {
   return (
     <div className="app">
       <Search onSearch={searchWeather}/>
-      <SideBar />
-      <RightSide />
-      <Footer />
+      
       <HomeWeather weather={weatherData}/>
     </div>
   )
