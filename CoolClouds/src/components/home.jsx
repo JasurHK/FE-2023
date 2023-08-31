@@ -1,20 +1,24 @@
 import "../styles/home.css"
+import daySunny from '../assets/day.svg'
+import nigthClear from '../assets/night.svg'
+import cloudyDay from '../assets/cloudy-day-1.svg'
+import cloudyNight from '../assets/cloudy-night-1.svg'
+import rainyDay from '../assets/rainy-1.svg'
+import rainyNight from '../assets/rainy-5.svg'
+import thunder from '../assets/thunder.svg'
+import snowyDay from '../assets/snowy-1.svg'
+import snowyNight from '../assets/snowy-6.svg'
+import weatherIcon from '../assets/weather.svg'
+import sunset from '../assets/weather_sunset.svg'
+
+
 
 const HomeWeather = ({weather}) => {
-    // const [isPending , setPending] = useState(false);
-    // if (!weather[0]){
-    //     setPending(true);
-    // }
-    // else if(!weather[1]){
-    //     setPending(true);
-    // }
-    // else {
-    //     setPending(false);
-    // }
    
     return (
         <div className="container">
             <div className="box">
+                <img src={thunder} alt="" />
                 {!weather[0] && 
                 <div className="loader">
                     <div data-glitch="Loading..." className="glitch">Loading...</div>
