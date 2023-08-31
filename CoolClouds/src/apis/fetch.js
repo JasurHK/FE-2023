@@ -11,11 +11,13 @@ export default async function  fetchLatLon (lat , lon ){
     
     try {
     	const response = await fetch(url, options);
+		if(!response.ok){
+			return response.message;
+		}
     	const result = await response.json();
     	console.log(result);
-        return result
+		return result;
     } catch (error) {
     	console.error(error);
-    }
-    
+    }   
 }
