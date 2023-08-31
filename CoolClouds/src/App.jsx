@@ -10,7 +10,8 @@ import fetchSearched from './apis/fetchSearched'
 function App() {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-  const [weatherData, setWeatherData] = useState(null)
+  const [weatherData, setWeatherData] = useState(null);
+  const [locationData, setLocationData] = useState(null);
 
   const getUserLatLon = () => {
     if (navigator.geolocation) {
@@ -38,16 +39,19 @@ function App() {
     try {
       let searched = await fetchSearched(city);
       // console.log(searched);
+      setLatitude(searched.latitude)
       let searchedWeatherLatLon = await fetchLatLon(searched.latitude,searched.longitude);
-
-      setWeatherData(searchedWeatherLatLon)
+      
+      setLocationData({searched});
+      setWeatherData(searchedWeatherLatLon);
     } catch (error) {
-      console.log('Error: ', error)
+      console.log('Error: ', error);
     }
   }
 
   useEffect(() => {
-    getUserLocationWeather()
+    getUserLocationWeather();
+    setWeatherData(null);
   },[latitude])
 
 
@@ -56,7 +60,7 @@ function App() {
     <div className="app">
       <Search onSearch={searchWeather}/>
       
-      <HomeWeather weather={weatherData}/>
+      <HomeWeather weather={[weatherData , locationData]}/>
     </div>
   )
 }
