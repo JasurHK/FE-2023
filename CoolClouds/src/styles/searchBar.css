@@ -3,6 +3,7 @@
   
   display: flex;
   align-items: center;
+  padding-top: 1rem;
 }
 .searchBar input{
   min-height: 50px;

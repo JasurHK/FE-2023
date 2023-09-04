@@ -44,9 +44,9 @@ const HomeWeather = ({weather}) => {
     return (
         <div className="container">
             <div className="box">
-                <img src={foundIcon.name} alt="" />
                 {!weather[0] && 
                 <div className="loader">
+                    <img src={foundIcon.name} alt="" />
                     <div data-glitch="Loading..." className="glitch">Loading...</div>
                 </div>
                 }
