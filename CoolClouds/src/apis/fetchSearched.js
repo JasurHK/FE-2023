@@ -3,7 +3,7 @@ export default async function fetchSearched (city){
     const options = {
     	method: 'GET',
     	headers: {
-    		'X-RapidAPI-Key': '902d90da72mshfad27c9b108d434p191acejsn81db4bf0c071',
+    		'X-RapidAPI-Key': '108ca2b751msh7f19e3af9a90362p1dc16ajsn45a05f48bfe2',
     		'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
     	}
     };
