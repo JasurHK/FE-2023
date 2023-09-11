@@ -48,3 +48,6 @@
   max-width: 400px;
   min-height: 600;
 }
+.nav1{
+  z-index: 1000;
+}
