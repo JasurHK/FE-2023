@@ -8,10 +8,10 @@ function App() {
 
   return (
     <>
-      <div className="nav bg-light d-flex justify-content align-items-center">
+      <div className="nav1 bg-light d-flex justify-content align-items-center position-sticky top-0">
         <h1 className='text-info' >SpinCruise</h1>
       </div>
-      <div className=" container container-xl">
+      <div className=" container ">
         <img src={daySunny} className="img-fluid" alt="..."/> 
       </div>
       <div className="container-xl">
@@ -111,6 +111,24 @@ function App() {
               <a href="#">More detailes</a>
             </div>
             <button className="btn btn-primary">hello</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-xl d-flex flex-column justify-content-center align-items-center">
+        <h1 className='title '>Why Spincruise ?</h1>
+        <div className="container container-xl d-flex justify-content-between">
+          <div className="card d-flex flex-column justify-content-center align-items-center">
+            <h2>The bike membership</h2>
+            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia accusantium eos impedit earum quod consectetur facilis ipsa et quis magni.</p>
+          </div>
+          <div className="card">
+            <h2>The bike membership</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia accusantium eos impedit earum quod consectetur facilis ipsa et quis magni.</p>
+          </div>
+          <div className="card">
+            <h2>The bike membership</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia accusantium eos impedit earum quod consectetur facilis ipsa et quis magni.</p>
           </div>
         </div>
       </div>
