@@ -115,7 +115,7 @@ function App() {
         </div>
       </div>
 
-      <div className="container-xl d-flex flex-column justify-content-center align-items-center">
+      {/* <div className="container-xl d-flex flex-column justify-content-center align-items-center">
         <h1 className='title '>Why Spincruise ?</h1>
         <div className="container container-xl d-flex justify-content-between">
           <div className="card d-flex flex-column justify-content-center align-items-center">
@@ -131,7 +131,7 @@ function App() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia accusantium eos impedit earum quod consectetur facilis ipsa et quis magni.</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
