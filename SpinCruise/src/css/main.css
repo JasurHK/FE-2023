@@ -1,0 +1,29 @@
+.main-container{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .banner{
+    height: 300px;
+    width: 100%;
+    background-image: url('../assets/product-list-header.jpg');
+    background-size: cover;
+    background-position: center;
+  
+    display: flex;
+    justify-content:center;
+    align-items: end;
+  }
+  .banner-text{
+    width: 70%;
+    height: 80%;
+    color: white;
+  }
+  .banner-text h1{
+    font-size: 64px;
+    font-weight: 700;
+  }
+  .banner-text p{
+    font-size: 18px;
+    width: 490px;
+  }
