@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom'
 import './App.css'
 import React from 'react';
 import Navbar from './components/nav';
-import Main from './components/main';
+import Main from './components/home';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark  } from '@fortawesome/free-solid-svg-icons';
 
