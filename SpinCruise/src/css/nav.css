@@ -8,6 +8,24 @@
     top: 0;
     right: 0;
   }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Allow clicks to pass through */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+    overflow: hidden;
+  }
+  
+  .overlay.active {
+    opacity: 1; /* Make the overlay visible when the sidebar is active */
+    pointer-events: auto; /* Enable interactions with the overlay */
+  }
+  
   nav{
     width: 70%;
     height: 100%;
@@ -17,7 +35,9 @@
   }
   .nav-logo h1{
     font-weight: 400;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #00a9e0;
   }
   #click{
     font-size: 35px;
@@ -27,17 +47,23 @@
     color: gray;
   }
 
-  .side-bar{
-    background-color: white;
+
+  .side-bar_container{
     position: absolute;
     top: 0;
-    right: 0;
+    right: -470px;
     width: 460px;
     height: 820px;
 
-    transform: scale(0);
-    transform-origin:right;
-    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+  .side-bar_container.active {
+    right: 0;
+  }
+  .side-bar{
+    background-color: white;
+    height: 100%;
+    width: 100%;
   }
   /* Initial state: hidden side-bar */
 /* .side-bar {
@@ -47,10 +73,6 @@
 } */
 
 /* Active state: visible side-bar */
-  .side-bar.active {
-    transform: scale(1);
-    overflow: hidden;
-  }
   .bar_nav{
     height: 69px;
     display: flex;
@@ -60,6 +82,7 @@
   
     position: sticky;
     top: 0;
+    background-color: white;
   }
   .bar_top{
     height: 35%;
@@ -78,11 +101,43 @@
     display: flex;
     justify-content: space-between;
   }
+  .bar_top ul li:hover{
+    color: #00a9e0;
+  }
   .bar_top ul li a{
     text-decoration: none;
     color: black;
   }
   .bar_bottom{
     height: 65%;
-    background-color: rgb(96, 165, 248);
+    background-color: #00a9e0;
+  }
+  .bottom_p{
+    padding-left: 40px;
+    color: white;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .bottom_p h1{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 28px;
+  }
+  .bottom_p a{
+    text-decoration: none;
+    color: white;
+    font-weight: 650;
+  }
+  .select-bar{
+    border: 1px solid red;
+    height: 140px;
+    margin: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+  }
+  select{
+    width: 90%;
+    height: 55px;
   }

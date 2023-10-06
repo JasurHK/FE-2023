@@ -1,4 +1,4 @@
-import '../css/main.css'
+import '../css/home.css'
 function Main() {
     return (
       <div className="main-container">
