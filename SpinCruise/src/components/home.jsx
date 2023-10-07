@@ -8,6 +8,15 @@ function Main() {
             <p>Are you looking for a bike that you can buy or rent in Poland? Choose a Swapfiets subscription instead. In our store you can choose between Dutch bikes or electric bikes for unisex, women or men.</p>
           </div>
         </div>
+        <div className="bikes-list">
+          <div className="bikes-nav">
+            <ul>
+              <li><a href="All">All</a></li>
+              <li><a href="E-biles">E-bikes</a></li>
+              <li><a href="City bikes">City bikes</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
 }

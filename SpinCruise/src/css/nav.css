@@ -100,13 +100,18 @@
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
+    color: #00a9e0;
   }
   .bar_top ul li:hover{
-    color: #00a9e0;
+    width: 320px;
+    transition: 0.3s ease;
   }
   .bar_top ul li a{
     text-decoration: none;
     color: black;
+  }
+  .bar_top ul li a:hover{
+    color: #00a9e0;
   }
   .bar_bottom{
     height: 65%;
@@ -129,7 +134,6 @@
     font-weight: 650;
   }
   .select-bar{
-    border: 1px solid red;
     height: 140px;
     margin: 20px 40px;
     display: flex;
@@ -137,7 +141,8 @@
     align-items: start;
     justify-content: space-around;
   }
-  select{
+  .select-bar select{
     width: 90%;
     height: 55px;
+    cursor: pointer;
   }
