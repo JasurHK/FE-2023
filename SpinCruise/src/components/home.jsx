@@ -9,12 +9,23 @@ function Main() {
           </div>
         </div>
         <div className="bikes-list">
-          <div className="bikes-nav">
-            <ul>
-              <li><a href="All">All</a></li>
-              <li><a href="E-biles">E-bikes</a></li>
-              <li><a href="City bikes">City bikes</a></li>
-            </ul>
+          <div className="container">
+            <div className="bikes-nav">
+              <ul>
+                <li>
+                  <a href="All">All</a> 
+                  <div className='line'></div>
+                </li>
+                <li>
+                  <a href="E-biles">E-bikes</a> 
+                  <div className="line"></div>
+                </li>
+                <li>
+                  <a href="City bikes">City bikes</a>
+                  <div className="line"></div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
