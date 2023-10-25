@@ -53,6 +53,7 @@ const Create = () => {
                 >
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
+                    <option value="yoshi">Jasur</option>
                 </select>
                 {!isPanding && <button>Add blog</button>}
                 {isPanding && <button>Adding...</button>}
